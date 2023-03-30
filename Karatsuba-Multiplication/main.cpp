@@ -67,10 +67,6 @@ std::string add_school(std::string i1, std::string i2, int b){
 int char_to_digit(char c, int base) {
     if (c >= '0' && c <= '9') {
         return c - '0';
-    } else if (c >= 'A' && c <= 'Z') {
-        return c - 'A' + 10;
-    } else if (c >= 'a' && c <= 'z') {
-        return c - 'a' + 10;
     } else {
         throw std::invalid_argument("Invalid character");
     }
@@ -79,8 +75,6 @@ int char_to_digit(char c, int base) {
 char digit_to_char(int digit, int base) {
     if (digit >= 0 && digit <= 9) {
         return '0' + digit;
-    } else if (digit >= 10 && digit <= 35) {
-        return 'A' + digit - 10;
     } else {
         throw std::invalid_argument("Invalid digit");
     }
