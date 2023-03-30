@@ -8,7 +8,7 @@ Where $x_1 \text{ and } y_1$ are the first halves of the integers and $x_0$ and 
 Then \
 $$xy = (x_{1}^{m} + x_0)(y_{1}^{m} + y_0) $$
 $$= x_1y_1B^{2m} + (x_1y_0 + x_0y_1)B^m + x_0y_0 $$
-Karatsubas insight was that $x_1y_0 + x_0y_1$ can be written in terms of $x_1y_1$ and $x_0y_0$, thus saving a multiplication step. This is shown below:
+Karatsuba's insight was that $x_1y_0 + x_0y_1$ can be written in terms of $x_1y_1$ and $x_0y_0$, thus saving a multiplication step. This is shown below:
 $$x_1y_0 + x_0y_1 = (x_1 + x_0)(y_1 + y_0) - x_1y_1 - x_0y_0$$
 
 The algorithm is implemented recursively where you recursively call the karatsuba_mulitply function on smaller inputs until you get the the base case and can apply primitive multiplication to digits of length 1. 
