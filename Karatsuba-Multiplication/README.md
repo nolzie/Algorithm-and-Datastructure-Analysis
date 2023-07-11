@@ -13,5 +13,5 @@ $$x_1y_0 + x_0y_1 = (x_1 + x_0)(y_1 + y_0) - x_1y_1 - x_0y_0$$
 
 The algorithm is implemented recursively where you recursively call the karatsuba_mulitply function on smaller inputs until you get the the base case and can apply primitive multiplication to digits of length 1. 
 ### Challenges 
-When implementing this algorithm I ran into the following problem. The stoi() function in c++ outputs an integer in base 10. This meant that I could not do the primitive calculations in base 10 and them convert them back to the input base.
+When implementing this algorithm I ran into the following problem. The stoi() function in c++ outputs an integer in base 10. This meant that I could not do the primitive calculations in base 10 and then convert them back to the input base.
 As such, I wrote helper functions which convert strings to and from digits for a given base b. I also wrote a helper function to convert from a base b to base 10 and vice versa. This allowed me to do the primitive calculations in base 10.
